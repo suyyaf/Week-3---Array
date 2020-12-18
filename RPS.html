@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors!</title>
+</head>
+<body>
+	<h1>Rock Paper Scissors</h1>
+	<button onclick="select('Rock')">Rock</button>
+	<button onclick="select('Paper')">Paper</button>
+	<button onclick="select('Scissor')">Scissor</button>
+	<script type="text/javascript">
+		var weapons = ["Rock","Paper","Scissor"]
+
+		function select(weapon){
+			var computerSelection = Math.floor(Math.random()*3)
+			var compWeapon = weapons[computerSelection]
+			alert("User Select "+weapon+" Computer select "+compWeapon);
+//other method
+			if (weapon == "Rock"){
+				if (compWeapon =="Rock"){
+					alert("Computer select "+compWeapon+". It's a draw!");
+				}
+				else if (compWeapon == "Paper"){
+					alert("Computer select "+compWeapon+". You lose!");
+				}
+				else{
+					alert("Computer select "+compWeapon+". You win!");
+				}
+			}
+			else if (weapon == "Paper"){
+				if (compWeapon =="Paper"){
+					alert("Computer select "+compWeapon+". It's a draw!");
+				}
+				else if (compWeapon == "Scissor"){
+					alert("Computer select "+compWeapon+". You lose!");
+				}
+				else{
+					alert("Computer select "+compWeapon+". You win!");
+				}
+			}
+			else if (weapon == "Scissor"){
+				if (compWeapon =="Scissor"){
+					alert("Computer select "+compWeapon+". It's a draw!");
+				}
+				else if (compWeapon == "Rock"){
+					alert("Computer select "+compWeapon+". You lose!");
+				}
+				else{
+					alert("Computer select "+compWeapon+". You win!");
+				}
+			}
+
+		}
+
+	</script>
+</body>
+</html>
